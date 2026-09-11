@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-игра ORA ORA - JoJo's Bizarre Adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="game-page">
+
+    <!-- Прелоадер -->
+    <div id="jojo-preloader">
+        <div class="jojo-go-text">ゴ</div>
+    </div>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">JOJO <span>ARCHIVE</span></a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">ГЛАВНАЯ</a>
+                <a href="characters.html" class="nav-link">ПЕРСОНАЖИ</a>
+                <a href="game.html" class="nav-link active">МИНИ-ИГРА</a>
+            </nav>
+            <button id="music-toggle">🎵 МУЗЫКА</button>
+        </div>
+    </header>
+
+    <!-- Основной контент игры -->
+    <main class="container game-main">
+        <div class="archive-header-block">
+            <h1 class="archive-title">ORA ORA <span>RUSH</span></h1>
+            <p class="archive-subtitle">Докажи скорость своего Стенда! Кликай как можно быстрее за отведенное время.</p>
+        </div>
+
+        <div class="game-arena" id="game-arena">
+            <div class="game-stats">
+                <div class="stat-box">Время: <span id="time-left">10</span>с</div>
+                <div class="stat-box">Удары: <span id="score">0</span></div>
+            </div>
+
+            <div class="game-screen" id="game-screen">
+                <div id="start-screen" class="game-overlay-screen">
+                    <h2>ГОТОВЫ?</h2>
+                    <p>Нажми кнопку ниже, чтобы запустить отсчет времени и начать серию ударов!</p>
+                    <button id="start-btn" class="btn-archive">НАЧАТЬ БИТВУ</button>
+                </div>
+
+                <div id="playing-screen" class="game-play-area hidden">
+                    <button id="punch-btn" class="punch-target-btn">
+                        <span class="ora-text">ОРА!</span>
+                        <span class="punch-sub">ЖМИ БЫСТРЕЕ!</span>
+                    </button>
+                </div>
+
+                <div id="result-screen" class="game-overlay-screen hidden">
+                    <h2>ВРЕМЯ ВЫШЛО!</h2>
+                    <p>Твой результат: <strong id="final-score">0</strong> ударов</p>
+                    <p id="rank-text" class="rank-result"></p>
+                    <button id="restart-btn" class="btn-archive">ИГРАТЬ СНОВА</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Скрипты -->
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
